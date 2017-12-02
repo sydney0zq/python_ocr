@@ -21,6 +21,8 @@ Usage:
 
 Here a demo in my project, demo.mp4.
 
+Price: 0~1000 times for free
+https://cloud.tencent.com/document/product/641/12399
 
 
 [MIT LICENSE]
