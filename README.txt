@@ -9,7 +9,8 @@ Please ensure you are using MacOS operating System.
 Usage:
     1. `brew install pngpaste`
     2. Apply an appid, secret_id and secret_key in `get_API_res.py`
-    3. `python3 custom_ocr.py` to get current captured screen document
+    3. `ln -s ./custom_ocr.py /usr/local/bin/custom_ocr.py`
+    4. `custom_ocr.py` from anywhere in shell to get current captured screen document
 ```
 
 
@@ -18,7 +19,7 @@ Usage:
 2. 识别后的字符串会被自动存入系统剪切板
 
 
-There a demo in my project, demo.mp4.
+Here a demo in my project, demo.mp4.
 
 
 
