@@ -3,7 +3,7 @@
 :Date: 2017-12-02 11:04
 
 
-Please ensure you are using a MacOS operating System.
+Please ensure you are using MacOS operating System.
 
 ```
 Usage:
