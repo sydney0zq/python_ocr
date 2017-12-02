@@ -12,3 +12,7 @@ Usage:
     3. `python3 custom_ocr.py` to get current captured screen document
 ```
 
+
+
+[MIT LICENSE]
+You should notice I forked Tencent YouTu SDK which can be checked [here](https://github.com/Tencent-YouTu/Python_sdk).
