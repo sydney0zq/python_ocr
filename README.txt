@@ -13,6 +13,11 @@ Usage:
 ```
 
 
+-----APPEND-----
+1. 截的图片会被存入/tmp/clip.jpg
+2. 识别后的字符串会被自动存入系统剪切板
+
+
 
 [MIT LICENSE]
 You should notice I forked Tencent YouTu SDK which can be checked [here](https://github.com/Tencent-YouTu/Python_sdk).
