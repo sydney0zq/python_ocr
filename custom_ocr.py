@@ -4,6 +4,7 @@ import os
 import sys
 import subprocess
 import time
+import pangu
 from get_API_res import get_res
 
 PUNC_TOBE_REP="!?,.:;“”()"
@@ -17,7 +18,7 @@ def load_clipboard_im():
     os.system(cmd)
     print (" | Screen has been saved to {}".format(CLIP_IMNAME))
 
-def rep(s):
+def custom_rep(s):
     if (len(PUNC_TOBE_REP) != len(PUNC_AFBE_REP)):
         raise ValueError(" | What the fuck did you modified...")
     for i in range(len(PUNC_TOBE_REP)):
@@ -50,12 +51,13 @@ def main():
     print (" | Start to process content in picture...")
     s = get_res(image_path=CLIP_IMNAME)
     if s != "":
-        s = rep(s)
+        s = custom_rep(s)
+        s = pangu.spacing(s)
         write_to_clipboard(s)
         print(s)
     else:
         print (" | No any characters...")
-    print (" | All done!\n | ")
+    print (" | All done!")
 
 if __name__ == "__main__":
     main()
