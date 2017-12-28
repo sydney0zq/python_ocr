@@ -17,12 +17,11 @@ Usage:
 -----APPEND-----
 1. 截的图片会被存入/tmp/clip.jpg
 2. 识别后的字符串会被自动存入系统剪切板
-3. 识别之后对字符用pangu工具进行处理，保证英文和中文之间有空格
 
 
 Here a demo in my project, demo.mp4.
 
-Price: 0~1000 times per month for free
+Price: 0~1000 times for free
 https://cloud.tencent.com/document/product/641/12399
 
 
