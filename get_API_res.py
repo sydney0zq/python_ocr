@@ -3,8 +3,8 @@
 import time
 import TencentYoutuyun
 from BaiduAIP.aip import AipOcr
-from config import Tencent_config, Baidu_config
-
+from config import Tencent_config, Baidu_config, cache_fn
+from logger import logclass
 
 def get_Tencent_res(image_path):
     appid = Tencent_config["appid"]
@@ -32,18 +32,22 @@ def get_Baidu_res(image_path):
 
     client = AipOcr(APP_ID, API_KEY, SECRET_KEY)
 
+    logger = logclass()
     """ 读取图片 """
     def get_file_content(image_path):
         with open(image_path, 'rb') as fp:
             return fp.read()
 
-    image = get_file_content('/tmp/clip.jpg')
+    image = get_file_content(cache_fn["cacheim"])
 
     """ 调用通用文字识别, 图片参数为本地图片 """
-    if Baidu_config["Accurate"] is False:
-        ret = client.basicGeneral(image)     # General
-    else:
+    if logger.check_highacc_avail() is True:
         ret = client.basicAccurate(image)    # Accurate
+        logger.today_addone(1)
+    else:
+        ret = client.basicGeneral(image)     # General
+        logger.today_addone(0)
+    print (logger)
 
     det_res = ""
     for item in ret["words_result"]:
@@ -52,7 +56,8 @@ def get_Baidu_res(image_path):
     return det_res
 
 if __name__ == "__main__":
-    print (get_Baidu_res("/tmp/clip.jpg"))
+    obj = logger()
+    print (obj)
 
 
 

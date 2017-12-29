@@ -9,6 +9,13 @@
 """
 Configuration for get_API_res.py
 """
+import os
+HOME=os.environ['HOME']
+
+cache_fn={
+    "logfn": os.path.join(HOME, ".ocr.json"),
+    "cacheim": "/tmp/clip.jpg"
+} 
 
 Tencent_config = {
     "appid": "",
@@ -24,7 +31,6 @@ Baidu_config = {
     "API_KEY": "",
     "SECRET_KEY": "",
     # Custom configuration
-    "Accurate": False,   # False means Generate, True means Accurate
     "active": True
 }
 
