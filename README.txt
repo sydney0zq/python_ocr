@@ -3,7 +3,7 @@
 :Date: 2017-12-02 11:04
 
 
-Please ensure you are using MacOS operating System.
+Please ensure you are using MacOS.
 
 ```
 Usage:
@@ -14,19 +14,25 @@ Usage:
 ```
 
 -----APPEND-----
-1. 截的图片会被存入/tmp/clip.jpg
-2. 识别后的字符串会被自动存入系统剪切板
+1. The captured image will be saved in the path `/tmp/clip.jpg`, and be covered by newer ones, if you need to review the history, feel free to modify code or issue a PR
+2. The recogintion text (by OCR service) will be loaded into clipboard automatically
+3. Most importantly, I have do really a lot post-processing to the recoginition text, including my custom designed replacement and `pangu` text-reformatting tool
 
 
-Here a demo in my project, demo.mp4.
+Here is a demo in my project, `demo.mp4`.
 
-Price: 0~1000 times for free per month (Tencent)
-https://cloud.tencent.com/document/product/641/12399
 
-Price: 0~500 times for free per day (Baidu)
-Register url: https://console.bce.baidu.com/ai/#/ai/ocr/overview/index
+0~1000 times for free per month (Tencent)
+Register [here](https://cloud.tencent.com/document/product/641/12399)
+
+0~500 times for free per day (Baidu)
+Register [here](https://console.bce.baidu.com/ai/#/ai/ocr/overview/index)
+
+Tips:
+    After my long time experience, Baidu service is better than Tencent. It is stable and will never appear text disordering fault.
+
 
 
 [MIT LICENSE]
-You should notice I forked Tencent YouTu SDK which can be checked [here](https://github.com/Tencent-YouTu/Python_sdk).
-And I also forked manually from Baidu AIP repo, [link](https://github.com/Baidu-AIP).
+Tencent YouTu SDK [link](https://github.com/Tencent-YouTu/Python_sdk)
+Baidu AIP SDK [link](https://github.com/Baidu-AIP)
